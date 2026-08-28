@@ -1,0 +1,3 @@
+[pre_model_sync]
+[post_model_sync]
+airplane_mode.airplane_mode.doctype.flight_member.patches.set_status

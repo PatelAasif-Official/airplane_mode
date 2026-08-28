@@ -1,0 +1,28 @@
+{
+ "attach_print": 0,
+ "channel": "Email",
+ "creation": "2023-09-17 12:22:16.436808",
+ "date_changed": "expire_on",
+ "days_in_advance": 40,
+ "docstatus": 0,
+ "doctype": "Notification",
+ "document_type": "Final Rent Statement",
+ "enabled": 1,
+ "event": "Days Before",
+ "idx": 0,
+ "is_standard": 1,
+ "message": "Hi {% if doc.full_name %}{{doc.full_name}}{% else %}{{doc.company_name}}{% endif %},\n<br><br>\nYour contract with {{doc.airport}} for Shop {{doc.shop_id}}-{{doc.shop_name}} is expiring on {{doc.get_formatted(\"expiry_date\")}}. Please contact the Airport authority for Renewal.",
+ "modified": "2023-09-17 13:22:34.631464",
+ "modified_by": "Administrator",
+ "module": "Airport Shop Management",
+ "name": "Contract Expiry",
+ "owner": "Administrator",
+ "recipients": [
+  {
+   "receiver_by_document_field": "email"
+  }
+ ],
+ "send_system_notification": 0,
+ "send_to_all_assignees": 0,
+ "subject": "Your Contract For Shop {{doc.shop_id}} about to expire"
+}

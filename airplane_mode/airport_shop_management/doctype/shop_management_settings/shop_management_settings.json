@@ -1,0 +1,71 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-09-17 12:27:37.878947",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "maintanance_per_shop",
+  "days_before",
+  "column_break_hbg9u",
+  "payment_reminder",
+  "contract_expiry_alert"
+ ],
+ "fields": [
+  {
+   "fieldname": "maintanance_per_shop",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Maintanance Per Shop",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.contract_expiry_alert == 1",
+   "description": "default is 30 days",
+   "fieldname": "days_before",
+   "fieldtype": "Int",
+   "label": "Days Before"
+  },
+  {
+   "fieldname": "column_break_hbg9u",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "contract_expiry_alert",
+   "fieldtype": "Check",
+   "label": "Send Contract Expiry Alert"
+  },
+  {
+   "default": "0",
+   "fieldname": "payment_reminder",
+   "fieldtype": "Check",
+   "label": "Send Payment Reminder"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2023-09-17 12:30:24.137089",
+ "modified_by": "Administrator",
+ "module": "Airport Shop Management",
+ "name": "Shop Management Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

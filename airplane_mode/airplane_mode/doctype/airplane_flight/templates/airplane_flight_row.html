@@ -1,0 +1,14 @@
+<div class="card-columns">
+	<div class="card">
+		<img class="card-img-top" src="{{frappe.db.get_value("Airplane",doc.airplane,'plane_image')}}"></imag>
+		<div class="crad-body" style="padding: 23px;">
+			<h5 class="card-title">{{ frappe.db.get_value("Airplane",doc.airplane,'airline')}} - {{ frappe.db.get_value("Airplane",doc.airplane,'model')}}</h5>
+			<p class="card-subtitle mb-2 text-muted">
+				{{ doc.source_airport_code }} <b>-></b> {{ doc.destination_airport_code }}<br>
+				{{frappe.utils.format_date(doc.date_of_departure, "d MMMM, YYYY")}} |  {{ doc.time_of_departure }} | {{frappe.utils.format_duration(doc.duration)}}
+			</p>
+			<a class="card-link btn btn-primary btn-sm primary-action" href="{{ doc.route }}">View Flight</a>
+		</div>
+	</div>
+</div>
+

@@ -1,0 +1,1 @@
+Your flight will be departure in 24 hrs!

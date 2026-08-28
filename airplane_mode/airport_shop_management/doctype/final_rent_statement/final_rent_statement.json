@@ -1,0 +1,201 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:FRS-{MM}-{YY}-{#####}",
+ "creation": "2023-09-10 14:38:06.798736",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "shopt_details_section",
+  "shop",
+  "shop_name",
+  "shop_id",
+  "column_break_zzgvf",
+  "airport",
+  "total_area",
+  "tenant_details_section",
+  "tenant",
+  "full_name",
+  "company_name",
+  "column_break_p1tmv",
+  "id_reg_no",
+  "email",
+  "rent_and_expiry_section",
+  "rent",
+  "column_break_fwket",
+  "expire_on",
+  "terms_and_condition_section",
+  "terms_and_condition",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "shopt_details_section",
+   "fieldtype": "Section Break",
+   "label": "Shopt Details"
+  },
+  {
+   "fieldname": "shop",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Shop",
+   "options": "Shop",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "shop.shop_name",
+   "fieldname": "shop_name",
+   "fieldtype": "Data",
+   "label": "Shop Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "shop.shop_id",
+   "fieldname": "shop_id",
+   "fieldtype": "Data",
+   "label": "Shop ID",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "shop.airport",
+   "fieldname": "airport",
+   "fieldtype": "Link",
+   "label": "Airport",
+   "options": "Airport",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "shop.total_area",
+   "fieldname": "total_area",
+   "fieldtype": "Float",
+   "label": "Total Area",
+   "read_only": 1
+  },
+  {
+   "fieldname": "tenant_details_section",
+   "fieldtype": "Section Break",
+   "label": "Tenant Details"
+  },
+  {
+   "fieldname": "tenant",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Tenant",
+   "options": "Tenant",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "tenant.full_name",
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "label": "Full Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "tenant.company_name",
+   "fieldname": "company_name",
+   "fieldtype": "Data",
+   "label": "Company Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "tenant.id_reg_no",
+   "fieldname": "id_reg_no",
+   "fieldtype": "Data",
+   "label": "ID/Reg No",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "tenant.email_id",
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "options": "Email",
+   "read_only": 1
+  },
+  {
+   "fieldname": "rent_and_expiry_section",
+   "fieldtype": "Section Break",
+   "label": "Rent and Expiry"
+  },
+  {
+   "fieldname": "rent",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Rent",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_fwket",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "expire_on",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Expire On",
+   "reqd": 1
+  },
+  {
+   "fieldname": "terms_and_condition_section",
+   "fieldtype": "Section Break",
+   "label": "Terms And Condition"
+  },
+  {
+   "fieldname": "terms_and_condition",
+   "fieldtype": "Text Editor",
+   "label": "Terms and Condition"
+  },
+  {
+   "fieldname": "column_break_zzgvf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_p1tmv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Final Rent Statement",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "group": "Rent Payments",
+   "link_doctype": "Rent Payment",
+   "link_fieldname": "final_rent_statement"
+  }
+ ],
+ "modified": "2023-09-10 15:03:35.760172",
+ "modified_by": "Administrator",
+ "module": "Airport Shop Management",
+ "name": "Final Rent Statement",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

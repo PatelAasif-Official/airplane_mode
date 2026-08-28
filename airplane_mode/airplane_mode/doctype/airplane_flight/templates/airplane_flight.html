@@ -1,0 +1,32 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+
+<h3 class="product-title">{{ airplane.airline }}</h3>
+<img class="card-img-center" src="{{ airplane.plane_image }}"></imag>
+<div class="rating">
+        <div class="rating">
+        <svg class="icon icon-md star-click"><use href="#icon-star"></use></svg>
+        <svg class="icon icon-md star-click"><use href="#icon-star"></use></svg>
+        <svg class="icon icon-md star-click"><use href="#icon-star"></use></svg>
+        <svg class="icon icon-md"><use href="#icon-star"></use></svg>
+        <svg class="icon icon-md"><use href="#icon-star"></use></svg>
+    </div>
+    <span class="review-no">41 reviews</span>
+</div>
+<p class="product-description">
+    <ul>
+        <li>{{ doc.source_airport_code }} to {{ doc.destination_airport_code }}</li>
+        <li>{{ frappe.utils.format_date(doc.date_of_departure, "d MMMM, YYYY") }} | {{ doc.time_of_departure }}</li>
+        <li>Duration: {{frappe.utils.format_duration(doc.duration)}}</li>
+    </ul>
+    {{ airplane.airline }} provide best service in most affordable price!
+</p>
+<h4 class="price">Price: <span>1400 INR</span><span class="text-muted"> /Adult</span></h4>
+<p class="vote"><strong>91%</strong> of buyers enjoyed this flight! <strong>(87 votes)</strong></p>
+<div class="action">
+    <a href="flights/ticket-booking/new?flight_price=1400&departure_date={{doc.date_of_departure}}&departure_time={{doc.time_of_departure}}&duration_of_flight={{doc.duration}}&source_airport_code={{doc.source_airport_code}}&destination_airport_code={{doc.destination_airport_code}}&flight={{doc.name}}" class="btn btn-primary btn-sm primary-action">Book Now</a>
+</div>
+{% endblock %}
+
+<!-- this is a sample default web page template -->

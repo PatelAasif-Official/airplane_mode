@@ -1,0 +1,18 @@
+<!-- <div>
+	<a href="{{ doc.route }}">{{ doc.shop_name }}</a>
+</div> -->
+<!-- this is a sample default list template -->
+<div class="card-columns">
+	<div class="card">
+		{% if doc.image1 %}
+			<img class="card-img-top" src="{{doc.image1}}"></imag>
+		{% endif %}
+		<div class="crad-body" style="padding: 23px;">
+			<h5 class="card-title">{{doc.shop_name}}</h5>
+			<p class="card-subtitle mb-2 text-muted">
+				{%if doc.floor%}{{doc.floor}} Floor, {%endif%}{{ doc.airport }}, {{doc.city or ""}}<br>
+				Status : <i>{{doc.status}}</i>
+			</p>
+		</div>
+	</div>
+</div>

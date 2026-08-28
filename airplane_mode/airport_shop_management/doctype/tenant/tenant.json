@@ -1,0 +1,116 @@
+{
+ "actions": [],
+ "autoname": "format:TNT-{#####}",
+ "creation": "2023-09-10 13:50:00.333287",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "full_name",
+  "company_name",
+  "is_company",
+  "column_break_j07q8",
+  "id_reg_no",
+  "contact_and_address_section",
+  "current_address",
+  "column_break_4glgs",
+  "email_id",
+  "phone"
+ ],
+ "fields": [
+  {
+   "depends_on": "eval:doc.is_company == 0",
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Full Name",
+   "mandatory_depends_on": "eval:doc.is_company == 0"
+  },
+  {
+   "depends_on": "eval:doc.is_company == 1",
+   "fieldname": "company_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Company Name",
+   "mandatory_depends_on": "eval:doc.is_company == 1"
+  },
+  {
+   "fieldname": "id_reg_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "ID/Reg No",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_j07q8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_company",
+   "fieldtype": "Check",
+   "in_standard_filter": 1,
+   "label": "Is Company"
+  },
+  {
+   "fieldname": "contact_and_address_section",
+   "fieldtype": "Section Break",
+   "label": "Contact and Address"
+  },
+  {
+   "fieldname": "current_address",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Current Address",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_4glgs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "email_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Email ID",
+   "options": "Email",
+   "reqd": 1
+  },
+  {
+   "fieldname": "phone",
+   "fieldtype": "Data",
+   "label": "Phone",
+   "options": "Phone"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-09-17 15:37:11.662736",
+ "modified_by": "Administrator",
+ "module": "Airport Shop Management",
+ "name": "Tenant",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "full_name, company_name",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
